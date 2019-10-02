@@ -240,7 +240,23 @@ public class ProblemSet2 {
          * Given a length and width, print the area, perimeter, and diagonal of the
          * corresponding rectangle.
          */
+         System.out.print("Enter a length: ");
+         double rectLength = in.nextDouble();
 
+         System.out.print("Enter a width: ");
+         double rectWidth = in.nextDouble();
+
+
+
+         double rectArea = rectLength*rectWidth;
+         double rectPerim = 2*rectLength+2*rectWidth;
+         double rectDiag = Math.hypot(rectLength, rectWidth);
+
+
+
+         System.out.printf("\nAREA      : %.2f\n", rectArea);
+         System.out.printf("PERIMETER : %.2f\n", rectPerim);
+         System.out.printf("DIAGONAL  : %.2f\n\n", rectDiag);
 
 
 
