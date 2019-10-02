@@ -14,210 +14,212 @@
  * questions, and fix your mistakes. It's the only way to get good at programming.
  */
 
-import java.util.Scanner;
+ import java.lang.Math;
+ import java.util.Scanner;
 
-public class ProblemSet2 {
+ public class ProblemSet2 {
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+     public static void main(String[] args) {
+         Scanner in = new Scanner(System.in);
 
-        /*
-         * Exercise 1.
-         *
-         * Prompt the user to enter the following information (in order): first name, last
-         * name, grade, age, and hometown.
-         */
+         /*
+          * Exercise 1.
+          *
+          * Prompt the user to enter the following information (in order): first name, last
+          * name, grade, age, and hometown.
+          */
 
 
-        System.out.print("\nEnter your first name: ");
-        String firstName = in.nextLine();
+         System.out.print("\nEnter your first name: ");
+         String firstName = in.nextLine();
 
-        System.out.print("Enter your last name: ");
-        String lastName = in.nextLine();
+         System.out.print("Enter your last name: ");
+         String lastName = in.nextLine();
 
-        System.out.print("Enter your grade: ");
-        String grade = in.nextLine();
+         System.out.print("Enter your grade: ");
+         String grade = in.nextLine();
 
-        System.out.print("Enter your age: ");
-        String age = in.nextLine();
+         System.out.print("Enter your age: ");
+         String age = in.nextLine();
 
-        System.out.print("Enter your hometown: ");
-        String town = in.nextLine();
+         System.out.print("Enter your hometown: ");
+         String town = in.nextLine();
 
 
 
-        System.out.printf("\nNAME     : %s %s\n", firstName, lastName);
-        System.out.printf("GRADE    : %s\n", grade);
-        System.out.printf("AGE      : %s\n", age);
-        System.out.printf("HOMETOWN : %s\n", town);
+         System.out.printf("\nNAME     : %s %s\n", firstName, lastName);
+         System.out.printf("GRADE    : %s\n", grade);
+         System.out.printf("AGE      : %s\n", age);
+         System.out.printf("HOMETOWN : %s\n", town);
 
 
-        /*
-         * Exercise 2.
-         *
-         * Given a dollar amount in the range [0.00, 1.00], print the number of dollar
-         * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
-         */
+         /*
+          * Exercise 2.
+          *
+          * Given a dollar amount in the range [0.00, 1.00], print the number of dollar
+          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
+          */
 
 
-        final double DOLLAR = 1.00;
-        final double QUARTER = 0.25;
-        final double DIME = 0.10;
-        final double NICKEL = 0.05;
+         final double DOLLAR = 1.00;
+         final double QUARTER = 0.25;
+         final double DIME = 0.10;
+         final double NICKEL = 0.05;
 
 
 
-        System.out.print("\nEnter a dollar amount: ");
-        double value = in.nextDouble();
+         System.out.print("\nEnter a dollar amount: ");
+         double value = in.nextDouble();
 
 
 
-        double dollarsAmount = Math.floor(value/Dollar);
-        value -= dollarsAmount*Dollar;
+         double dollarsAmount = Math.floor(value/DOLLAR);
+         value -= dollarsAmount*DOLLAR;
 
-        double quartersAmount = Math.floor(value/Quarter);
-        value -= quartersAmount*Quarter;
+         double quartersAmount = Math.floor(value/QUARTER);
+         value -= quartersAmount*QUARTER;
 
-        double dimesAmount = Math.floor(value/Dime);
-        value -= dimesAmount*Dime;
+         double dimesAmount = Math.floor(value/DIME);
+         value -= dimesAmount*DIME;
 
-        double nickelAmount = Math.floor(value/Nickel);
-        value -= nickelAmount*Nickel;
+         double nickelAmount = Math.floor(value/NICKEL);
+         value -= nickelAmount*NICKEL;
 
-        double pennyAmount = Math.floor(value/0.01);
+         double pennyAmount = Math.floor(value/0.01);
 
 
 
-        System.out.printf("\nDOLLARS  : %.0f\n", dollarsAmount);
-        System.out.printf("QUARTERS : %.0f\n", quartersAmount);
-        System.out.printf("DIMES    : %.0f\n", dimesAmount);
-        System.out.printf("NICKELS  : %.0f\n", nickelAmount);
-        System.out.printf("PENNIES  : %.0f\n\n", pennyAmount);
+         System.out.printf("\nDOLLARS  : %.0f\n", dollarsAmount);
+         System.out.printf("QUARTERS : %.0f\n", quartersAmount);
+         System.out.printf("DIMES    : %.0f\n", dimesAmount);
+         System.out.printf("NICKELS  : %.0f\n", nickelAmount);
+         System.out.printf("PENNIES  : %.0f\n\n", pennyAmount);
 
 
-        /*
-         * Exercise 3.
-         *
-         * Given a dollar amount in the range [0.00, 20.00], print the smallest number of
-         * bills and coins needed to produce this amount.
-         */
+         /*
+          * Exercise 3.
+          *
+          * Given a dollar amount in the range [0.00, 20.00], print the smallest number of
+          * bills and coins needed to produce this amount.
+          */
 
 
-        final double TWENTY_DOLLAR = 20.00;
-        final double TEN_DOLLAR = 10.00;
-        final double FIVE_DOLLAR = 5.00;
+         final double TWENTY_DOLLAR = 20.00;
+         final double TEN_DOLLAR = 10.00;
+         final double FIVE_DOLLAR = 5.00;
 
 
 
-        System.out.print("Enter a dollar amount: ");
-        value = in.nextDouble();
+         System.out.print("Enter a dollar amount: ");
+         value = in.nextDouble();
 
 
 
-        double twentiesNeeded = Math.floor(value/TWENTY_DOLLAR);
-        value -= twentiesNeeded*TWENTY_DOLLAR;
+         double twentiesNeeded = Math.floor(value/TWENTY_DOLLAR);
+         value -= twentiesNeeded*TWENTY_DOLLAR;
 
-        double tensNeeded = Math.floor(value/TEN_DOLLAR);
-        value -= tensNeeded*TEN_DOLLAR;
+         double tensNeeded = Math.floor(value/TEN_DOLLAR);
+         value -= tensNeeded*TEN_DOLLAR;
 
-        double fivesNeeded = Math.floor(value/FIVE_DOLLAR);
-        value -= fivesNeeded*FIVE_DOLLAR;
+         double fivesNeeded = Math.floor(value/FIVE_DOLLAR);
+         value -= fivesNeeded*FIVE_DOLLAR;
 
-        dollarsAmount = Math.floor(value/Dollar);
-        value -= dollarsAmount*Dollar;
+         dollarsAmount = Math.floor(value/DOLLAR);
+         value -= dollarsAmount*DOLLAR;
 
-        quartersAmount = Math.floor(value/Quarter);
-        value -= quartersAmount*Quarter;
+         quartersAmount = Math.floor(value/QUARTER);
+         value -= quartersAmount*QUARTER;
 
-        dimesAmount = Math.floor(value/Dime);
-        value -= dimesAmount*Dime;
+         dimesAmount = Math.floor(value/DIME);
+         value -= dimesAmount*DIME;
 
-        nickelAmount = Math.floor(value/Nickel);
-        value -= nickelAmount*Nickel;
+         nickelAmount = Math.floor(value/NICKEL);
+         value -= nickelAmount*NICKEL;
 
-        pennyAmount = Math.floor(value/0.01);
+         pennyAmount = Math.floor(value/0.01);
 
 
 
-        double billsTotal = twentiesNeeded+tensNeeded+fivesNeeded+dollarsAmount;
-        double coinsTotal = quartersAmount+dimesAmount+nickelAmount+pennyAmount;
+         double billsTotal = twentiesNeeded+tensNeeded+fivesNeeded+dollarsAmount;
+         double coinsTotal = quartersAmount+dimesAmount+nickelAmount+pennyAmount;
 
 
 
-        System.out.printf("\nBILLS : %.0f\n", billsTotal);
-        System.out.printf("COINS : %.0f\n\n", coinsTotal);
+         System.out.printf("\nBILLS : %.0f\n", billsTotal);
+         System.out.printf("COINS : %.0f\n\n", coinsTotal);
 
 
-        /*
-         * Exercise 4.
-         *
-         * Given a number of inches, print the equivalent number of miles, yards, feet,
-         * and inches.
-         */
+         /*
+          * Exercise 4.
+          *
+          * Given a number of inches, print the equivalent number of miles, yards, feet,
+          * and inches.
+          */
 
 
-        final double MILES_TO_IN = 63360;
-        final double YARDS_TO_IN = 36;
-        final double FEET_TO_IN = 12;
+         final double MILES_TO_IN = 63360;
+         final double YARDS_TO_IN = 36;
+         final double FEET_TO_IN = 12;
 
 
 
-        System.out.print("Enter a number of inches: ");
-        double inches = in.nextDouble();
+         System.out.print("Enter a number of inches: ");
+         double inches = in.nextDouble();
 
 
 
-        double miles = Math.floor(inches/MILES_TO_IN);
-        inches -= miles*MILES_TO_IN;
+         double miles = Math.floor(inches/MILES_TO_IN);
+         inches -= miles*MILES_TO_IN;
 
-        double yards = Math.floor(inches/YARDS_TO_IN);
-        inches -= yards*YARDS_TO_IN;
+         double yards = Math.floor(inches/YARDS_TO_IN);
+         inches -= yards*YARDS_TO_IN;
 
-        double feet = Math.floor(inches/FEET_TO_IN);
-        inches -= feet*FEET_TO_IN;
+         double feet = Math.floor(inches/FEET_TO_IN);
+         inches -= feet*FEET_TO_IN;
 
-        System.out.printf("\nMILES  : %.0f\n", miles);
-        System.out.printf("YARDS  : %.0f\n", yards);
-        System.out.printf("FEET   : %.0f\n", feet);
-        System.out.printf("INCHES : %.0f\n\n", inches);
+         System.out.printf("\nMILES  : %.0f\n", miles);
+         System.out.printf("YARDS  : %.0f\n", yards);
+         System.out.printf("FEET   : %.0f\n", feet);
+         System.out.printf("INCHES : %.0f\n\n", inches);
 
 
-        /*
-         * Exercise 5.
-         *
-         * Given a number of centimeters, print the equivalent number of kilometers,
-         * meters, and centimeters.
-         */
+         /*
+          * Exercise 5.
+          *
+          * Given a number of centimeters, print the equivalent number of kilometers,
+          * meters, and centimeters.
+          */
 
 
-        final double KILO_TO_CENTI = 100000;
-        final double METERS_TO_CENTI = 100;
+         final double KILO_TO_CENTI = 100000;
+         final double METERS_TO_CENTI = 100;
 
 
 
-        System.out.print("Enter a number of centimeters: ");
-        double centis = in.nextDouble();
+         System.out.print("Enter a number of centimeters: ");
+         double centis = in.nextDouble();
 
 
 
-        double kilos = Math.floor(centis/KILO_TO_CENTI);
-        centis -= kilos*KILO_TO_CENTI;
+         double kilos = Math.floor(centis/KILO_TO_CENTI);
+         centis -= kilos*KILO_TO_CENTI;
 
-        double meters = Math.floor(centis/METERS_TO_CENTI);
-        centis -= meters*METERS_TO_CENTI;
+         double meters = Math.floor(centis/METERS_TO_CENTI);
+         centis -= meters*METERS_TO_CENTI;
 
 
 
-        System.out.printf("\nKILOMETERS  : %.0f\n", kilos);
-        System.out.printf("METERS      : %.0f\n", meters);
-        System.out.printf("CENTIMETERS : %.0f\n\n", centis);
+         System.out.printf("\nKILOMETERS  : %.0f\n", kilos);
+         System.out.printf("METERS      : %.0f\n", meters);
+         System.out.printf("CENTIMETERS : %.0f\n\n", centis);
 
 
-        /*
-         * Exercise 6.
-         *
-         * Given a diameter, print the area and circumference of the corresponding circle.
-         */
+         /*
+          * Exercise 6.
+          *
+          * Given a diameter, print the area and circumference of the corresponding circle.
+          */
+
 
          System.out.print("Enter a diameter: ");
          double diameter = in.nextDouble();
@@ -234,12 +236,14 @@ public class ProblemSet2 {
          System.out.printf("CIRCUMFERENCE : %.2f\n\n", circCircumference);
 
 
-        /*
-         * Exercise 7.
-         *
-         * Given a length and width, print the area, perimeter, and diagonal of the
-         * corresponding rectangle.
-         */
+         /*
+          * Exercise 7.
+          *
+          * Given a length and width, print the area, perimeter, and diagonal of the
+          * corresponding rectangle.
+          */
+
+
          System.out.print("Enter a length: ");
          double rectLength = in.nextDouble();
 
@@ -259,32 +263,71 @@ public class ProblemSet2 {
          System.out.printf("DIAGONAL  : %.2f\n\n", rectDiag);
 
 
-
-        /*
-         * Exercise 8.
-         *
-         * Given a side length, print the area and perimeter of the corresponding hexagon.
-         */
-
+         /*
+          * Exercise 8.
+          *
+          * Given a side length, print the area and perimeter of the corresponding hexagon.
+          */
 
 
-
-        /*
-         * Exercise 9.
-         *
-         * Given a string, reverse and print the first and second halves of that string.
-         */
+         System.out.print("Enter a side length: ");
+         double hexLength = in.nextDouble();
 
 
 
-
-        /*
-         * Exercise 10.
-         *
-         * Given a first, middle, and last name, print the corresponding initials.
-         */
+         double hexArea = (3*Math.sqrt(3))/2*Math.pow(hexLength,2);
+         double hexPerim = 6*hexLength;
 
 
 
-    }
-}
+         System.out.printf("\nAREA      : %.2f\n", hexArea);
+         System.out.printf("PERIMETER : %.2f\n\n", hexPerim);
+
+
+         /*
+          * Exercise 9.
+          *
+          * Given a string, reverse and print the first and second halves of that string.
+          */
+
+
+         System.out.print("Enter a String: ");
+         String inputString = in.next();
+
+
+
+         int stringHalf = Math.round(inputString.length()/2);
+
+         String firstHalf = inputString.substring(0,stringHalf);
+         String secondHalf = inputString.substring(stringHalf);
+
+
+
+         System.out.println("\n" + secondHalf+firstHalf + "\n");
+
+
+         /*
+          * Exercise 10.
+          *
+          * Given a first, middle, and last name, print the corresponding initials.
+          */
+
+
+         System.out.print("Enter your first name: ");
+         String fName = in.next();
+
+         System.out.print("Enter your middle name: ");
+         String middleName = in.next();
+
+         System.out.print("Enter your last name: ");
+         String lName = in.next();
+
+
+
+         System.out.println("\n" + fName.substring(0,1) + middleName.substring(0,1)
+             + lName.substring(0,1) + "\n");
+
+         in.close();
+
+     }
+ }
